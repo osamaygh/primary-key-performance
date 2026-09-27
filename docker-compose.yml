@@ -1,0 +1,46 @@
+# MySQL PK vs no-PK experiment - everything runs in Docker.
+#
+#   docker compose up --abort-on-container-exit
+#
+# 1. starts MySQL 8.0 in a container (port 3306, root password "root")
+# 2. waits until MySQL is ready
+# 3. runs pk_experiment.py in a Python container -> writes results.json, verification.json and
+#    pk_experiment_results.xlsx into THIS folder
+# 4. --abort-on-container-exit stops MySQL when the experiment is finished
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: pk-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: pk_experiment
+    ports:
+      - "3306:3306"            # lets MySQL Workbench / the mysql CLI on your Mac connect too
+    healthcheck:
+      # 127.0.0.1 forces TCP, so it only passes once the real server (not the init server) is up
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 60
+
+  experiment:
+    image: python:3.12-slim
+    container_name: pk-experiment
+    depends_on:
+      mysql:
+        condition: service_healthy
+    working_dir: /work
+    volumes:
+      - ./:/work               # results are written into this folder on your Mac
+    environment:
+      MACHINE_LABEL: "MacBook (MySQL 8.0 in Docker)"
+      PIP_ROOT_USER_ACTION: ignore
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
+    command:
+      - sh
+      - -c
+      - >-
+        pip install -q mysql-connector-python openpyxl &&
+        python -u pk_experiment.py --host mysql --user root --password root
+        --machine-label "$$MACHINE_LABEL"

@@ -1,0 +1,1029 @@
+{
+ "env": {
+  "mysql_version": "8.0.46",
+  "innodb_buffer_pool_mb": 128,
+  "innodb_flush_log_at_trx_commit": "1",
+  "innodb_page_size": "16384",
+  "os": "Linux 6.10.14-linuxkit",
+  "cpu": "Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz",
+  "python": "3.12.14",
+  "run_started": "2026-09-27 18:13:44"
+ },
+ "show_create": {
+  "with_pk": "CREATE TABLE `data_pk` (\n  `id` int NOT NULL,\n  `name` varchar(50) NOT NULL,\n  `email` varchar(100) NOT NULL,\n  `age` int NOT NULL,\n  `city` varchar(30) NOT NULL,\n  `salary` decimal(12,2) NOT NULL,\n  `created_at` datetime NOT NULL,\n  PRIMARY KEY (`id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci",
+  "without_pk": "CREATE TABLE `data_nopk` (\n  `id` int NOT NULL,\n  `name` varchar(50) NOT NULL,\n  `email` varchar(100) NOT NULL,\n  `age` int NOT NULL,\n  `city` varchar(30) NOT NULL,\n  `salary` decimal(12,2) NOT NULL,\n  `created_at` datetime NOT NULL\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci"
+ },
+ "show_index": {
+  "with_pk": [
+   {
+    "Key_name": "PRIMARY",
+    "Column_name": "id",
+    "Non_unique": 0,
+    "Index_type": "BTREE"
+   }
+  ],
+  "without_pk": []
+ },
+ "data_checks": [
+  {
+   "stage": "after step 2",
+   "table": "data_pk",
+   "row_count": 1000000,
+   "distinct_ids": 1000000,
+   "min_id": 1,
+   "max_id": 1000000,
+   "checksum": 3469309737,
+   "age_min": 18,
+   "age_max": 65,
+   "age_avg": 41.5,
+   "distinct_cities": 12,
+   "distinct_names": 999362,
+   "salary_min": 3000059.15,
+   "salary_max": 49999989.4,
+   "salary_avg": 26500765.76,
+   "created_min": "2020-01-01 00:19:37",
+   "created_max": "2025-12-29 23:56:28"
+  },
+  {
+   "stage": "after step 2",
+   "table": "data_nopk",
+   "row_count": 1000000,
+   "distinct_ids": 1000000,
+   "min_id": 1,
+   "max_id": 1000000,
+   "checksum": 3469309737,
+   "age_min": 18,
+   "age_max": 65,
+   "age_avg": 41.5,
+   "distinct_cities": 12,
+   "distinct_names": 999362,
+   "salary_min": 3000059.15,
+   "salary_max": 49999989.4,
+   "salary_avg": 26500765.76,
+   "created_min": "2020-01-01 00:19:37",
+   "created_max": "2025-12-29 23:56:28"
+  },
+  {
+   "stage": "after step 5",
+   "table": "data_pk",
+   "row_count": 1220000,
+   "distinct_ids": 1220000,
+   "min_id": 1,
+   "max_id": 1220000,
+   "checksum": 1493473557,
+   "age_min": 18,
+   "age_max": 65,
+   "age_avg": 41.5,
+   "distinct_cities": 12,
+   "distinct_names": 1219038,
+   "salary_min": 3000059.15,
+   "salary_max": 49999989.4,
+   "salary_avg": 26505402.38,
+   "created_min": "2020-01-01 00:19:37",
+   "created_max": "2025-12-29 23:56:28"
+  },
+  {
+   "stage": "after step 5",
+   "table": "data_nopk",
+   "row_count": 1220000,
+   "distinct_ids": 1220000,
+   "min_id": 1,
+   "max_id": 1220000,
+   "checksum": 1493473557,
+   "age_min": 18,
+   "age_max": 65,
+   "age_avg": 41.5,
+   "distinct_cities": 12,
+   "distinct_names": 1219038,
+   "salary_min": 3000059.15,
+   "salary_max": 49999989.4,
+   "salary_avg": 26505402.38,
+   "created_min": "2020-01-01 00:19:37",
+   "created_max": "2025-12-29 23:56:28"
+  }
+ ],
+ "samples": [
+  {
+   "table": "with_pk",
+   "id": "1",
+   "name": "Itnqqj",
+   "email": "itnqqj7155@example.com",
+   "age": "43",
+   "city": "Yogyakarta",
+   "salary": "5715807.44",
+   "created_at": "2021-04-11 05:32:01"
+  },
+  {
+   "table": "with_pk",
+   "id": "2",
+   "name": "Inruglh",
+   "email": "inruglh693@example.com",
+   "age": "51",
+   "city": "Semarang",
+   "salary": "31234151.83",
+   "created_at": "2024-06-01 01:00:32"
+  },
+  {
+   "table": "with_pk",
+   "id": "3",
+   "name": "Rayhkughpcch",
+   "email": "rayhkughpcch9510@example.com",
+   "age": "52",
+   "city": "Medan",
+   "salary": "13640075.70",
+   "created_at": "2024-12-25 07:17:07"
+  },
+  {
+   "table": "with_pk",
+   "id": "4",
+   "name": "Eriqepo",
+   "email": "eriqepo8066@example.com",
+   "age": "51",
+   "city": "Jakarta",
+   "salary": "40833470.90",
+   "created_at": "2025-10-07 10:57:19"
+  },
+  {
+   "table": "with_pk",
+   "id": "5",
+   "name": "Zyrintoqo",
+   "email": "zyrintoqo3430@example.com",
+   "age": "40",
+   "city": "Medan",
+   "salary": "42011579.66",
+   "created_at": "2020-04-16 12:34:39"
+  },
+  {
+   "table": "with_pk",
+   "id": "6",
+   "name": "Hrslvzp",
+   "email": "hrslvzp3@example.com",
+   "age": "28",
+   "city": "Bandung",
+   "salary": "4396593.78",
+   "created_at": "2024-09-06 06:48:49"
+  },
+  {
+   "table": "with_pk",
+   "id": "7",
+   "name": "Edavsmdcuugu",
+   "email": "edavsmdcuugu5737@example.com",
+   "age": "39",
+   "city": "Solo",
+   "salary": "26056456.03",
+   "created_at": "2023-08-30 10:19:03"
+  },
+  {
+   "table": "with_pk",
+   "id": "8",
+   "name": "Rzvejh",
+   "email": "rzvejh8912@example.com",
+   "age": "46",
+   "city": "Makassar",
+   "salary": "27707559.69",
+   "created_at": "2020-04-15 23:04:56"
+  },
+  {
+   "table": "with_pk",
+   "id": "9",
+   "name": "Bdgna",
+   "email": "bdgna6297@example.com",
+   "age": "60",
+   "city": "Makassar",
+   "salary": "36997219.55",
+   "created_at": "2021-11-10 22:41:39"
+  },
+  {
+   "table": "with_pk",
+   "id": "10",
+   "name": "Zpzgqfafnm",
+   "email": "zpzgqfafnm1409@example.com",
+   "age": "48",
+   "city": "Medan",
+   "salary": "9607294.37",
+   "created_at": "2023-04-21 16:01:48"
+  },
+  {
+   "table": "with_pk",
+   "id": "1000",
+   "name": "Layznir",
+   "email": "layznir1725@example.com",
+   "age": "56",
+   "city": "Malang",
+   "salary": "29409307.05",
+   "created_at": "2022-06-25 14:00:40"
+  },
+  {
+   "table": "with_pk",
+   "id": "10000",
+   "name": "Scidluympx",
+   "email": "scidluympx9306@example.com",
+   "age": "55",
+   "city": "Solo",
+   "salary": "33081797.01",
+   "created_at": "2023-07-14 08:09:11"
+  },
+  {
+   "table": "with_pk",
+   "id": "100000",
+   "name": "Aclzzioq",
+   "email": "aclzzioq6438@example.com",
+   "age": "46",
+   "city": "Semarang",
+   "salary": "20475322.00",
+   "created_at": "2021-01-14 03:31:03"
+  },
+  {
+   "table": "with_pk",
+   "id": "1000000",
+   "name": "Bgwcsd",
+   "email": "bgwcsd2131@example.com",
+   "age": "44",
+   "city": "Makassar",
+   "salary": "36514640.38",
+   "created_at": "2020-05-28 03:40:15"
+  },
+  {
+   "table": "without_pk",
+   "id": "1",
+   "name": "Itnqqj",
+   "email": "itnqqj7155@example.com",
+   "age": "43",
+   "city": "Yogyakarta",
+   "salary": "5715807.44",
+   "created_at": "2021-04-11 05:32:01"
+  },
+  {
+   "table": "without_pk",
+   "id": "2",
+   "name": "Inruglh",
+   "email": "inruglh693@example.com",
+   "age": "51",
+   "city": "Semarang",
+   "salary": "31234151.83",
+   "created_at": "2024-06-01 01:00:32"
+  },
+  {
+   "table": "without_pk",
+   "id": "3",
+   "name": "Rayhkughpcch",
+   "email": "rayhkughpcch9510@example.com",
+   "age": "52",
+   "city": "Medan",
+   "salary": "13640075.70",
+   "created_at": "2024-12-25 07:17:07"
+  },
+  {
+   "table": "without_pk",
+   "id": "4",
+   "name": "Eriqepo",
+   "email": "eriqepo8066@example.com",
+   "age": "51",
+   "city": "Jakarta",
+   "salary": "40833470.90",
+   "created_at": "2025-10-07 10:57:19"
+  },
+  {
+   "table": "without_pk",
+   "id": "5",
+   "name": "Zyrintoqo",
+   "email": "zyrintoqo3430@example.com",
+   "age": "40",
+   "city": "Medan",
+   "salary": "42011579.66",
+   "created_at": "2020-04-16 12:34:39"
+  },
+  {
+   "table": "without_pk",
+   "id": "6",
+   "name": "Hrslvzp",
+   "email": "hrslvzp3@example.com",
+   "age": "28",
+   "city": "Bandung",
+   "salary": "4396593.78",
+   "created_at": "2024-09-06 06:48:49"
+  },
+  {
+   "table": "without_pk",
+   "id": "7",
+   "name": "Edavsmdcuugu",
+   "email": "edavsmdcuugu5737@example.com",
+   "age": "39",
+   "city": "Solo",
+   "salary": "26056456.03",
+   "created_at": "2023-08-30 10:19:03"
+  },
+  {
+   "table": "without_pk",
+   "id": "8",
+   "name": "Rzvejh",
+   "email": "rzvejh8912@example.com",
+   "age": "46",
+   "city": "Makassar",
+   "salary": "27707559.69",
+   "created_at": "2020-04-15 23:04:56"
+  },
+  {
+   "table": "without_pk",
+   "id": "9",
+   "name": "Bdgna",
+   "email": "bdgna6297@example.com",
+   "age": "60",
+   "city": "Makassar",
+   "salary": "36997219.55",
+   "created_at": "2021-11-10 22:41:39"
+  },
+  {
+   "table": "without_pk",
+   "id": "10",
+   "name": "Zpzgqfafnm",
+   "email": "zpzgqfafnm1409@example.com",
+   "age": "48",
+   "city": "Medan",
+   "salary": "9607294.37",
+   "created_at": "2023-04-21 16:01:48"
+  },
+  {
+   "table": "without_pk",
+   "id": "1000",
+   "name": "Layznir",
+   "email": "layznir1725@example.com",
+   "age": "56",
+   "city": "Malang",
+   "salary": "29409307.05",
+   "created_at": "2022-06-25 14:00:40"
+  },
+  {
+   "table": "without_pk",
+   "id": "10000",
+   "name": "Scidluympx",
+   "email": "scidluympx9306@example.com",
+   "age": "55",
+   "city": "Solo",
+   "salary": "33081797.01",
+   "created_at": "2023-07-14 08:09:11"
+  },
+  {
+   "table": "without_pk",
+   "id": "100000",
+   "name": "Aclzzioq",
+   "email": "aclzzioq6438@example.com",
+   "age": "46",
+   "city": "Semarang",
+   "salary": "20475322.00",
+   "created_at": "2021-01-14 03:31:03"
+  },
+  {
+   "table": "without_pk",
+   "id": "1000000",
+   "name": "Bgwcsd",
+   "email": "bgwcsd2131@example.com",
+   "age": "44",
+   "city": "Makassar",
+   "salary": "36514640.38",
+   "created_at": "2020-05-28 03:40:15"
+  }
+ ],
+ "selects": [
+  {
+   "table": "with_pk",
+   "target_id": 10,
+   "repeat": 1,
+   "client_ms": 0.6889170000476952,
+   "mysql_ms": 0.29173,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 10"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 10,
+   "repeat": 2,
+   "client_ms": 0.6583650000493435,
+   "mysql_ms": 0.260856,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 10"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 10,
+   "repeat": 3,
+   "client_ms": 0.6498090000377488,
+   "mysql_ms": 0.245494,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 10"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 10,
+   "repeat": 4,
+   "client_ms": 0.6807450000678728,
+   "mysql_ms": 0.266683,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 10"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 10,
+   "repeat": 5,
+   "client_ms": 0.6865540000262627,
+   "mysql_ms": 0.264424,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 10"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 10,
+   "repeat": 1,
+   "client_ms": 815.745791999916,
+   "mysql_ms": 815.31253,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 10"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 10,
+   "repeat": 2,
+   "client_ms": 790.3327540000191,
+   "mysql_ms": 789.593954,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 10"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 10,
+   "repeat": 3,
+   "client_ms": 787.8888000000188,
+   "mysql_ms": 787.39275,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 10"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 10,
+   "repeat": 4,
+   "client_ms": 851.6181999999617,
+   "mysql_ms": 851.185257,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 10"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 10,
+   "repeat": 5,
+   "client_ms": 777.2198400000434,
+   "mysql_ms": 776.783738,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 10"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 1000,
+   "repeat": 1,
+   "client_ms": 1.0876380000581776,
+   "mysql_ms": 0.474997,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 1000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 1000,
+   "repeat": 2,
+   "client_ms": 0.652649000016936,
+   "mysql_ms": 0.263131,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 1000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 1000,
+   "repeat": 3,
+   "client_ms": 0.7420260000117196,
+   "mysql_ms": 0.271756,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 1000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 1000,
+   "repeat": 4,
+   "client_ms": 0.6588300000203162,
+   "mysql_ms": 0.255192,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 1000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 1000,
+   "repeat": 5,
+   "client_ms": 0.7204080000065005,
+   "mysql_ms": 0.323301,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 1000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 1000,
+   "repeat": 1,
+   "client_ms": 821.5491619999966,
+   "mysql_ms": 821.055583,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 1000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 1000,
+   "repeat": 2,
+   "client_ms": 840.2707170000667,
+   "mysql_ms": 839.744489,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 1000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 1000,
+   "repeat": 3,
+   "client_ms": 733.5564129999739,
+   "mysql_ms": 733.098735,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 1000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 1000,
+   "repeat": 4,
+   "client_ms": 785.255971999959,
+   "mysql_ms": 784.716195,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 1000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 1000,
+   "repeat": 5,
+   "client_ms": 837.8135760000305,
+   "mysql_ms": 837.27349,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 1000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 10000,
+   "repeat": 1,
+   "client_ms": 1.2380610000946035,
+   "mysql_ms": 0.451487,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 10000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 10000,
+   "repeat": 2,
+   "client_ms": 0.7189689999904658,
+   "mysql_ms": 0.281846,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 10000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 10000,
+   "repeat": 3,
+   "client_ms": 0.7330450000608835,
+   "mysql_ms": 0.327522,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 10000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 10000,
+   "repeat": 4,
+   "client_ms": 0.6432309999127028,
+   "mysql_ms": 0.25682,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 10000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 10000,
+   "repeat": 5,
+   "client_ms": 0.6902679999711836,
+   "mysql_ms": 0.271782,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 10000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 10000,
+   "repeat": 1,
+   "client_ms": 872.0497069999738,
+   "mysql_ms": 871.628741,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 10000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 10000,
+   "repeat": 2,
+   "client_ms": 797.0932480000101,
+   "mysql_ms": 796.522717,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 10000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 10000,
+   "repeat": 3,
+   "client_ms": 859.3404839999721,
+   "mysql_ms": 848.559438,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 10000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 10000,
+   "repeat": 4,
+   "client_ms": 808.0561980000311,
+   "mysql_ms": 807.478595,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 10000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 10000,
+   "repeat": 5,
+   "client_ms": 780.9401049998996,
+   "mysql_ms": 780.517006,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 10000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 100000,
+   "repeat": 1,
+   "client_ms": 1.016019000076085,
+   "mysql_ms": 0.362787,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 100000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 100000,
+   "repeat": 2,
+   "client_ms": 0.666361000071447,
+   "mysql_ms": 0.265279,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 100000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 100000,
+   "repeat": 3,
+   "client_ms": 0.6615659999624768,
+   "mysql_ms": 0.254383,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 100000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 100000,
+   "repeat": 4,
+   "client_ms": 0.7881660000066404,
+   "mysql_ms": 0.356762,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 100000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 100000,
+   "repeat": 5,
+   "client_ms": 0.6827629999861529,
+   "mysql_ms": 0.253651,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 100000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 100000,
+   "repeat": 1,
+   "client_ms": 806.4520220000304,
+   "mysql_ms": 806.009589,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 100000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 100000,
+   "repeat": 2,
+   "client_ms": 871.7428900000641,
+   "mysql_ms": 871.313417,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 100000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 100000,
+   "repeat": 3,
+   "client_ms": 788.8024559999849,
+   "mysql_ms": 788.365621,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 100000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 100000,
+   "repeat": 4,
+   "client_ms": 959.0046140000368,
+   "mysql_ms": 958.504123,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 100000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 100000,
+   "repeat": 5,
+   "client_ms": 845.4855559999714,
+   "mysql_ms": 845.069312,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 100000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 1000000,
+   "repeat": 1,
+   "client_ms": 1.1437980000437165,
+   "mysql_ms": 0.566334,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 1000000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 1000000,
+   "repeat": 2,
+   "client_ms": 0.7408860000168715,
+   "mysql_ms": 0.3355,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 1000000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 1000000,
+   "repeat": 3,
+   "client_ms": 1.1619069999824205,
+   "mysql_ms": 0.448783,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 1000000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 1000000,
+   "repeat": 4,
+   "client_ms": 1.3692480000599971,
+   "mysql_ms": 0.497537,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 1000000"
+  },
+  {
+   "table": "with_pk",
+   "target_id": 1000000,
+   "repeat": 5,
+   "client_ms": 0.6769039999880988,
+   "mysql_ms": 0.257912,
+   "rows_examined": 1,
+   "rows_sent": 1,
+   "no_index_used": 0,
+   "sql_text": "SELECT * FROM data_pk WHERE id = 1000000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 1000000,
+   "repeat": 1,
+   "client_ms": 879.3995270000323,
+   "mysql_ms": 878.961233,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 1000000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 1000000,
+   "repeat": 2,
+   "client_ms": 837.870941999995,
+   "mysql_ms": 837.26759,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 1000000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 1000000,
+   "repeat": 3,
+   "client_ms": 845.2996620000022,
+   "mysql_ms": 844.916247,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 1000000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 1000000,
+   "repeat": 4,
+   "client_ms": 756.9453390000263,
+   "mysql_ms": 756.63878,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 1000000"
+  },
+  {
+   "table": "without_pk",
+   "target_id": 1000000,
+   "repeat": 5,
+   "client_ms": 903.327562999948,
+   "mysql_ms": 902.892118,
+   "rows_examined": 1000000,
+   "rows_sent": 1,
+   "no_index_used": 1,
+   "sql_text": "SELECT * FROM data_nopk WHERE id = 1000000"
+  }
+ ],
+ "inserts": [
+  {
+   "step": "Initial load",
+   "table": "with_pk",
+   "rows_inserted": 1000000,
+   "client_s": 56.70836768799995,
+   "mysql_s": 30.954988552,
+   "statements": 1001
+  },
+  {
+   "step": "Initial load",
+   "table": "without_pk",
+   "rows_inserted": 1000000,
+   "client_s": 33.60133909599995,
+   "mysql_s": 17.684745495,
+   "statements": 1001
+  },
+  {
+   "step": "Insert 20,000",
+   "table": "with_pk",
+   "rows_inserted": 20000,
+   "client_s": 0.7495852350000405,
+   "mysql_s": 0.427533389,
+   "statements": 21,
+   "count_after": 1020000
+  },
+  {
+   "step": "Insert 20,000",
+   "table": "without_pk",
+   "rows_inserted": 20000,
+   "client_s": 0.756412953999984,
+   "mysql_s": 0.386938598,
+   "statements": 21,
+   "count_after": 1020000
+  },
+  {
+   "step": "Insert 40,000",
+   "table": "with_pk",
+   "rows_inserted": 40000,
+   "client_s": 1.2774576619999607,
+   "mysql_s": 0.708480528,
+   "statements": 41,
+   "count_after": 1060000
+  },
+  {
+   "step": "Insert 40,000",
+   "table": "without_pk",
+   "rows_inserted": 40000,
+   "client_s": 1.2431863900000053,
+   "mysql_s": 0.646316394,
+   "statements": 41,
+   "count_after": 1060000
+  },
+  {
+   "step": "Insert 60,000",
+   "table": "with_pk",
+   "rows_inserted": 60000,
+   "client_s": 1.9898657070000354,
+   "mysql_s": 1.086613423,
+   "statements": 61,
+   "count_after": 1120000
+  },
+  {
+   "step": "Insert 60,000",
+   "table": "without_pk",
+   "rows_inserted": 60000,
+   "client_s": 1.927359506999892,
+   "mysql_s": 1.014152742,
+   "statements": 61,
+   "count_after": 1120000
+  },
+  {
+   "step": "Insert 100,000",
+   "table": "with_pk",
+   "rows_inserted": 100000,
+   "client_s": 3.223516141999994,
+   "mysql_s": 1.781666465,
+   "statements": 101,
+   "count_after": 1220000
+  },
+  {
+   "step": "Insert 100,000",
+   "table": "without_pk",
+   "rows_inserted": 100000,
+   "client_s": 3.170678057000032,
+   "mysql_s": 1.680908856,
+   "statements": 101,
+   "count_after": 1220000
+  }
+ ]
+}
